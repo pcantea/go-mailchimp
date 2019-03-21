@@ -17,3 +17,14 @@ type MemberResponse struct {
 	ListID          string                 `json:"list_id"`          // The id for the list.
 	MergeFields     map[string]interface{} `json:"merge_fields"`     // merge fields
 }
+
+type BatchResponse struct {
+	ID                 string `json:"id"`
+	Status             string `json:"status"`
+	TotalOperations    int    `json:"total_operations"`
+	FinishedOperations int    `json:"finished_operations"`
+	ErroredOperations  int    `json:"errored_operations"`
+	SubmittedAt        string `json:"submitted_at"`
+	CompletedAt        string `json:"completed_at"`
+	ResponseURL        string `json:"response_body_url"`
+}
